@@ -98,6 +98,7 @@ function my_plugin_options() {
     jQuery(document).ready(function() {
       var position = "<?php echo $yer_position ?>";
       var type = "<?php echo $yer_type ?>";
+      var url = "<?php echo plugins_url('images/', __FILE__) ?>";
 
       var positionInput = jQuery("#yer-position");
       var typeInput = jQuery("#yer-type");
@@ -115,7 +116,7 @@ function my_plugin_options() {
       });
 
       displayPreview = function() {
-        jQuery("#yer-preview").html('<img src="http://hackforequality.github.io/ribbon/img/' + type + '_' + position + '.png" />');
+        jQuery("#yer-preview").html('<img src="' + url + type + '_' + position + '.png" />');
       };
 
       displayPreview();
